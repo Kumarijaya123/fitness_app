@@ -1,4 +1,13 @@
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
+=======
+import 'package:fitness_app/screens/home_screen.dart';
+import 'package:fitness_app/constants/navigation.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:fitness_app/utils/firestore_crud.dart';
+import 'package:fitness_app/constants/global.dart' as globals;
+>>>>>>> 84a7e32bd974a696bd1b25b59e9b4dc0a1c2e76c
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});
@@ -8,9 +17,23 @@ class SignUpScreen extends StatefulWidget {
 }
 
 class _SignUpScreenState extends State<SignUpScreen> {
+<<<<<<< HEAD
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+=======
+  bool isVisible = true;
+  FirebaseAuth firebaseAuth = FirebaseAuth.instance;
+  TextEditingController emailController = TextEditingController();
+  TextEditingController nameController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
+  TextEditingController fullnameController = TextEditingController();
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.white,
+>>>>>>> 84a7e32bd974a696bd1b25b59e9b4dc0a1c2e76c
       body: SafeArea(
         child: Container(
           color: Colors.white,
@@ -25,13 +48,21 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   child: Container(
                     child: Center(
                       child: Image.asset(
+<<<<<<< HEAD
                         "assets/images/signup.png",
+=======
+                        "assets/images/signup.jpg",
+>>>>>>> 84a7e32bd974a696bd1b25b59e9b4dc0a1c2e76c
                       ),
                     ),
                   ),
                 ),
                 Padding(
+<<<<<<< HEAD
                   padding: const EdgeInsets.only(left: 30, top: 20),
+=======
+                  padding: const EdgeInsets.only(left: 30, top: 0),
+>>>>>>> 84a7e32bd974a696bd1b25b59e9b4dc0a1c2e76c
                   child: Center(
                     child: const Text(
                       "Create Account",
@@ -44,7 +75,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   ),
                 ),
                 Padding(
+<<<<<<< HEAD
                   padding: const EdgeInsets.only(left: 28, top: 35),
+=======
+                  padding: const EdgeInsets.only(left: 28, top: 25),
+>>>>>>> 84a7e32bd974a696bd1b25b59e9b4dc0a1c2e76c
                   child: SizedBox(
                     height: 55,
                     width: 350,
@@ -76,6 +111,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                               child: SizedBox(
                                 width: 320,
                                 child: TextFormField(
+<<<<<<< HEAD
+=======
+                                  controller: nameController,
+>>>>>>> 84a7e32bd974a696bd1b25b59e9b4dc0a1c2e76c
                                   style: TextStyle(fontSize: 20),
                                   decoration: InputDecoration(
                                     border: InputBorder.none,
@@ -127,6 +166,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                               child: SizedBox(
                                 width: 320,
                                 child: TextFormField(
+<<<<<<< HEAD
+=======
+                                  controller: fullnameController,
+>>>>>>> 84a7e32bd974a696bd1b25b59e9b4dc0a1c2e76c
                                   style: TextStyle(fontSize: 20),
                                   decoration: InputDecoration(
                                     border: InputBorder.none,
@@ -178,6 +221,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                               child: SizedBox(
                                 width: 320,
                                 child: TextFormField(
+<<<<<<< HEAD
+=======
+                                  controller: emailController,
+>>>>>>> 84a7e32bd974a696bd1b25b59e9b4dc0a1c2e76c
                                   style: TextStyle(fontSize: 20),
                                   decoration: InputDecoration(
                                     border: InputBorder.none,
@@ -229,6 +276,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                               child: SizedBox(
                                 width: 320,
                                 child: TextFormField(
+<<<<<<< HEAD
                                   obscureText: true,
                                   style: TextStyle(fontSize: 20),
                                   decoration: InputDecoration(
@@ -238,6 +286,28 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                           size: 25.0,
                                           color:
                                               Colors.black.withOpacity(0.8))),
+=======
+                                  obscureText: isVisible,
+                                  controller: passwordController,
+                                  style: TextStyle(fontSize: 20),
+                                  decoration: InputDecoration(
+                                    border: InputBorder.none,
+                                    hintText: 'password',
+                                    suffixIcon: IconButton(
+                                        icon: Icon(
+                                          isVisible
+                                              ? Icons.visibility_off
+                                              : Icons.visibility,
+                                          size: 25.0,
+                                          color: Colors.black.withOpacity(0.8),
+                                        ),
+                                        onPressed: () {
+                                          setState(() {
+                                            isVisible = !isVisible;
+                                          });
+                                        }),
+                                  ),
+>>>>>>> 84a7e32bd974a696bd1b25b59e9b4dc0a1c2e76c
                                 ),
                               ),
                             ),
@@ -248,13 +318,23 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   ),
                 ),
                 Padding(
+<<<<<<< HEAD
                   padding: const EdgeInsets.only(left: 150, top: 45),
+=======
+                  padding: const EdgeInsets.only(left: 150, top: 25),
+>>>>>>> 84a7e32bd974a696bd1b25b59e9b4dc0a1c2e76c
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.black,
                       minimumSize: const Size(70, 40), // Background color
                     ),
+<<<<<<< HEAD
                     onPressed: () => {},
+=======
+                    onPressed: () {
+                      registerToFb();
+                    },
+>>>>>>> 84a7e32bd974a696bd1b25b59e9b4dc0a1c2e76c
                     child: const Text(
                       "Sign Up",
                       style: TextStyle(fontSize: 20),
@@ -268,4 +348,59 @@ class _SignUpScreenState extends State<SignUpScreen> {
       ),
     );
   }
+<<<<<<< HEAD
+=======
+
+  void dispose() {
+    super.dispose();
+    nameController.dispose();
+    emailController.dispose();
+    passwordController.dispose();
+    fullnameController.dispose();
+  }
+
+  void registerToFb() {
+    Map<String, String> data = {
+      "img": "",
+      "email": emailController.text,
+      "fullname": fullnameController.text,
+      "username": nameController.text
+    };
+
+    firebaseAuth
+        .createUserWithEmailAndPassword(
+            email: emailController.text, password: passwordController.text)
+        .then((result) {
+      globals.userdoc = result.user!.uid;
+      FireStoreMethods.addUserDoc(
+        "Users",
+        result.user!.uid,
+        data,
+      ).then((res) async {
+        await FireStoreMethods.getDetails("Users", globals.userdoc);
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (context) => RootApp()),
+        );
+      });
+    }).catchError((err) {
+      showDialog(
+          context: context,
+          builder: (BuildContext context) {
+            return AlertDialog(
+              title: Text("Error"),
+              content: Text(err.message),
+              actions: [
+                TextButton(
+                  child: Text("Ok"),
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                )
+              ],
+            );
+          });
+    });
+  }
+>>>>>>> 84a7e32bd974a696bd1b25b59e9b4dc0a1c2e76c
 }

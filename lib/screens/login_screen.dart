@@ -1,4 +1,9 @@
+import 'package:fitness_app/constants/navigation.dart';
+import 'package:fitness_app/screens/signup_screen.dart';
+import 'package:fitness_app/utils/firestore_crud.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:fitness_app/constants/global.dart' as globals;
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -8,19 +13,20 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+  bool isVisible = true;
+  FirebaseAuth firebaseAuth = FirebaseAuth.instance;
+  final passwordController = TextEditingController();
+  final emailController = TextEditingController();
+
   @override
   void initState() {
-    Future.delayed(
-      Duration(seconds: 3),
-      //() => Navigator.pushNamed(context, '/onboarding'),
-      () => {},
-    );
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: Container(
           color: Colors.white,
@@ -83,6 +89,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 child: SizedBox(
                                   width: 320,
                                   child: TextFormField(
+                                    controller: emailController,
                                     style: TextStyle(fontSize: 20),
                                     decoration: InputDecoration(
                                       border: InputBorder.none,
@@ -134,15 +141,26 @@ class _LoginScreenState extends State<LoginScreen> {
                                 child: SizedBox(
                                   width: 320,
                                   child: TextFormField(
+                                    obscureText: isVisible,
+                                    controller: passwordController,
                                     style: TextStyle(fontSize: 20),
                                     decoration: InputDecoration(
                                       border: InputBorder.none,
                                       hintText: 'password',
-                                      suffixIcon: Icon(
-                                        Icons.lock_outline,
-                                        size: 25.0,
-                                        color: Colors.black.withOpacity(0.8),
-                                      ),
+                                      suffixIcon: IconButton(
+                                          icon: Icon(
+                                            isVisible
+                                                ? Icons.visibility_off
+                                                : Icons.visibility,
+                                            size: 25.0,
+                                            color:
+                                                Colors.black.withOpacity(0.8),
+                                          ),
+                                          onPressed: () {
+                                            setState(() {
+                                              isVisible = !isVisible;
+                                            });
+                                          }),
                                     ),
                                   ),
                                 ),
@@ -170,7 +188,13 @@ class _LoginScreenState extends State<LoginScreen> {
                             minimumSize:
                                 const Size(100, 40), // Background color
                           ),
-                          onPressed: () => {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => SignUpScreen()),
+                            );
+                          },
                           child: const Text(
                             "Sign Up",
                             style: TextStyle(fontSize: 18),
@@ -193,7 +217,9 @@ class _LoginScreenState extends State<LoginScreen> {
                             minimumSize:
                                 const Size(100, 40), // Background color
                           ),
-                          onPressed: () => {},
+                          onPressed: () {
+                            logInToFb();
+                          },
                           child: const Text(
                             "Login",
                             style: TextStyle(fontSize: 18),
@@ -207,5 +233,43 @@ class _LoginScreenState extends State<LoginScreen> {
         ),
       ),
     );
+  }
+
+  void dispose() {
+    super.dispose();
+    emailController.dispose();
+    passwordController.dispose();
+  }
+
+  void logInToFb() {
+    firebaseAuth
+        .signInWithEmailAndPassword(
+            email: emailController.text, password: passwordController.text)
+        .then((result) async {
+      globals.userdoc = result.user!.uid;
+      await FireStoreMethods.getDetails("Users", globals.userdoc);
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => RootApp(uid: result.user!.uid)),
+      );
+    }).catchError((err) {
+      print(err.message);
+      showDialog(
+          context: context,
+          builder: (BuildContext context) {
+            return AlertDialog(
+              title: Text("Error"),
+              content: Text(err.message),
+              actions: [
+                TextButton(
+                  child: Text("Ok"),
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                )
+              ],
+            );
+          });
+    });
   }
 }
