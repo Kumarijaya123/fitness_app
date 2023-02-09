@@ -1,12 +1,18 @@
 import 'package:flutter/material.dart';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 84a7e32bd974a696bd1b25b59e9b4dc0a1c2e76c
 import 'package:fitness_app/screens/home_screen.dart';
 import 'package:fitness_app/constants/navigation.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:fitness_app/utils/firestore_crud.dart';
 import 'package:fitness_app/constants/global.dart' as globals;
+<<<<<<< HEAD
+>>>>>>> 84a7e32bd974a696bd1b25b59e9b4dc0a1c2e76c
+=======
 >>>>>>> 84a7e32bd974a696bd1b25b59e9b4dc0a1c2e76c
 
 class SignUpScreen extends StatefulWidget {
@@ -18,10 +24,13 @@ class SignUpScreen extends StatefulWidget {
 
 class _SignUpScreenState extends State<SignUpScreen> {
 <<<<<<< HEAD
+<<<<<<< HEAD
   @override
   Widget build(BuildContext context) {
     return Scaffold(
 =======
+=======
+>>>>>>> 84a7e32bd974a696bd1b25b59e9b4dc0a1c2e76c
   bool isVisible = true;
   FirebaseAuth firebaseAuth = FirebaseAuth.instance;
   TextEditingController emailController = TextEditingController();
@@ -33,6 +42,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+<<<<<<< HEAD
+>>>>>>> 84a7e32bd974a696bd1b25b59e9b4dc0a1c2e76c
+=======
 >>>>>>> 84a7e32bd974a696bd1b25b59e9b4dc0a1c2e76c
       body: SafeArea(
         child: Container(
@@ -49,7 +61,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     child: Center(
                       child: Image.asset(
 <<<<<<< HEAD
+<<<<<<< HEAD
                         "assets/images/signup.png",
+=======
+                        "assets/images/signup.jpg",
+>>>>>>> 84a7e32bd974a696bd1b25b59e9b4dc0a1c2e76c
 =======
                         "assets/images/signup.jpg",
 >>>>>>> 84a7e32bd974a696bd1b25b59e9b4dc0a1c2e76c
@@ -59,7 +75,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 ),
                 Padding(
 <<<<<<< HEAD
+<<<<<<< HEAD
                   padding: const EdgeInsets.only(left: 30, top: 20),
+=======
+                  padding: const EdgeInsets.only(left: 30, top: 0),
+>>>>>>> 84a7e32bd974a696bd1b25b59e9b4dc0a1c2e76c
 =======
                   padding: const EdgeInsets.only(left: 30, top: 0),
 >>>>>>> 84a7e32bd974a696bd1b25b59e9b4dc0a1c2e76c
@@ -76,7 +96,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 ),
                 Padding(
 <<<<<<< HEAD
+<<<<<<< HEAD
                   padding: const EdgeInsets.only(left: 28, top: 35),
+=======
+                  padding: const EdgeInsets.only(left: 28, top: 25),
+>>>>>>> 84a7e32bd974a696bd1b25b59e9b4dc0a1c2e76c
 =======
                   padding: const EdgeInsets.only(left: 28, top: 25),
 >>>>>>> 84a7e32bd974a696bd1b25b59e9b4dc0a1c2e76c
@@ -112,6 +136,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                 width: 320,
                                 child: TextFormField(
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                                  controller: nameController,
+>>>>>>> 84a7e32bd974a696bd1b25b59e9b4dc0a1c2e76c
 =======
                                   controller: nameController,
 >>>>>>> 84a7e32bd974a696bd1b25b59e9b4dc0a1c2e76c
@@ -167,6 +195,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                 width: 320,
                                 child: TextFormField(
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                                  controller: fullnameController,
+>>>>>>> 84a7e32bd974a696bd1b25b59e9b4dc0a1c2e76c
 =======
                                   controller: fullnameController,
 >>>>>>> 84a7e32bd974a696bd1b25b59e9b4dc0a1c2e76c
@@ -222,6 +254,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                 width: 320,
                                 child: TextFormField(
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                                  controller: emailController,
+>>>>>>> 84a7e32bd974a696bd1b25b59e9b4dc0a1c2e76c
 =======
                                   controller: emailController,
 >>>>>>> 84a7e32bd974a696bd1b25b59e9b4dc0a1c2e76c
@@ -277,6 +313,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                 width: 320,
                                 child: TextFormField(
 <<<<<<< HEAD
+<<<<<<< HEAD
                                   obscureText: true,
                                   style: TextStyle(fontSize: 20),
                                   decoration: InputDecoration(
@@ -287,6 +324,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                           color:
                                               Colors.black.withOpacity(0.8))),
 =======
+=======
+>>>>>>> 84a7e32bd974a696bd1b25b59e9b4dc0a1c2e76c
                                   obscureText: isVisible,
                                   controller: passwordController,
                                   style: TextStyle(fontSize: 20),
@@ -307,6 +346,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                           });
                                         }),
                                   ),
+<<<<<<< HEAD
+>>>>>>> 84a7e32bd974a696bd1b25b59e9b4dc0a1c2e76c
+=======
 >>>>>>> 84a7e32bd974a696bd1b25b59e9b4dc0a1c2e76c
                                 ),
                               ),
@@ -319,7 +361,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 ),
                 Padding(
 <<<<<<< HEAD
+<<<<<<< HEAD
                   padding: const EdgeInsets.only(left: 150, top: 45),
+=======
+                  padding: const EdgeInsets.only(left: 150, top: 25),
+>>>>>>> 84a7e32bd974a696bd1b25b59e9b4dc0a1c2e76c
 =======
                   padding: const EdgeInsets.only(left: 150, top: 25),
 >>>>>>> 84a7e32bd974a696bd1b25b59e9b4dc0a1c2e76c
@@ -329,7 +375,13 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       minimumSize: const Size(70, 40), // Background color
                     ),
 <<<<<<< HEAD
+<<<<<<< HEAD
                     onPressed: () => {},
+=======
+                    onPressed: () {
+                      registerToFb();
+                    },
+>>>>>>> 84a7e32bd974a696bd1b25b59e9b4dc0a1c2e76c
 =======
                     onPressed: () {
                       registerToFb();
@@ -349,7 +401,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
     );
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 84a7e32bd974a696bd1b25b59e9b4dc0a1c2e76c
 
   void dispose() {
     super.dispose();
@@ -402,5 +457,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
           });
     });
   }
+<<<<<<< HEAD
+>>>>>>> 84a7e32bd974a696bd1b25b59e9b4dc0a1c2e76c
+=======
 >>>>>>> 84a7e32bd974a696bd1b25b59e9b4dc0a1c2e76c
 }

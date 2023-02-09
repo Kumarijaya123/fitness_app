@@ -2,6 +2,7 @@
 # See https://dart.dev/tools/pub/glossary#lockfile
 packages:
 <<<<<<< HEAD
+<<<<<<< HEAD
   animations:
     dependency: "direct main"
     description:
@@ -10,6 +11,8 @@ packages:
     source: hosted
     version: "2.0.7"
 =======
+=======
+>>>>>>> 84a7e32bd974a696bd1b25b59e9b4dc0a1c2e76c
   _flutterfire_internals:
     dependency: transitive
     description:
@@ -17,6 +20,9 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.12"
+<<<<<<< HEAD
+>>>>>>> 84a7e32bd974a696bd1b25b59e9b4dc0a1c2e76c
+=======
 >>>>>>> 84a7e32bd974a696bd1b25b59e9b4dc0a1c2e76c
   async:
     dependency: transitive
@@ -75,6 +81,7 @@ packages:
     source: hosted
     version: "1.16.0"
 <<<<<<< HEAD
+<<<<<<< HEAD
   crypto:
     dependency: transitive
     description:
@@ -83,6 +90,8 @@ packages:
     source: hosted
     version: "3.0.2"
 =======
+=======
+>>>>>>> 84a7e32bd974a696bd1b25b59e9b4dc0a1c2e76c
   cross_file:
     dependency: transitive
     description:
@@ -97,6 +106,9 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.17.2"
+<<<<<<< HEAD
+>>>>>>> 84a7e32bd974a696bd1b25b59e9b4dc0a1c2e76c
+=======
 >>>>>>> 84a7e32bd974a696bd1b25b59e9b4dc0a1c2e76c
   cupertino_icons:
     dependency: "direct main"
@@ -113,6 +125,7 @@ packages:
     source: hosted
     version: "1.3.1"
 <<<<<<< HEAD
+<<<<<<< HEAD
   ffi:
     dependency: transitive
     description:
@@ -128,6 +141,8 @@ packages:
     source: hosted
     version: "6.1.4"
 =======
+=======
+>>>>>>> 84a7e32bd974a696bd1b25b59e9b4dc0a1c2e76c
   firebase_auth:
     dependency: "direct main"
     description:
@@ -191,6 +206,9 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "3.3.19"
+<<<<<<< HEAD
+>>>>>>> 84a7e32bd974a696bd1b25b59e9b4dc0a1c2e76c
+=======
 >>>>>>> 84a7e32bd974a696bd1b25b59e9b4dc0a1c2e76c
   flutter:
     dependency: "direct main"
@@ -224,6 +242,7 @@ packages:
     source: sdk
     version: "0.0.0"
 <<<<<<< HEAD
+<<<<<<< HEAD
   google_fonts:
     dependency: "direct main"
     description:
@@ -232,6 +251,8 @@ packages:
     source: hosted
     version: "4.0.3"
 =======
+=======
+>>>>>>> 84a7e32bd974a696bd1b25b59e9b4dc0a1c2e76c
   flutter_web_plugins:
     dependency: transitive
     description: flutter
@@ -279,6 +300,9 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.15.1"
+<<<<<<< HEAD
+>>>>>>> 84a7e32bd974a696bd1b25b59e9b4dc0a1c2e76c
+=======
 >>>>>>> 84a7e32bd974a696bd1b25b59e9b4dc0a1c2e76c
   http:
     dependency: transitive
@@ -295,6 +319,7 @@ packages:
     source: hosted
     version: "4.0.2"
 <<<<<<< HEAD
+<<<<<<< HEAD
   intl:
     dependency: "direct main"
     description:
@@ -303,6 +328,8 @@ packages:
     source: hosted
     version: "0.18.0"
 =======
+=======
+>>>>>>> 84a7e32bd974a696bd1b25b59e9b4dc0a1c2e76c
   image_picker:
     dependency: "direct main"
     description:
@@ -352,6 +379,9 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.6.4"
+<<<<<<< HEAD
+>>>>>>> 84a7e32bd974a696bd1b25b59e9b4dc0a1c2e76c
+=======
 >>>>>>> 84a7e32bd974a696bd1b25b59e9b4dc0a1c2e76c
   lints:
     dependency: transitive
@@ -388,6 +418,7 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.8.2"
+<<<<<<< HEAD
 <<<<<<< HEAD
   path_provider:
     dependency: transitive
@@ -439,6 +470,8 @@ packages:
     source: hosted
     version: "3.1.0"
 =======
+=======
+>>>>>>> 84a7e32bd974a696bd1b25b59e9b4dc0a1c2e76c
   path_drawing:
     dependency: transitive
     description:
@@ -460,6 +493,9 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "5.1.0"
+<<<<<<< HEAD
+>>>>>>> 84a7e32bd974a696bd1b25b59e9b4dc0a1c2e76c
+=======
 >>>>>>> 84a7e32bd974a696bd1b25b59e9b4dc0a1c2e76c
   plugin_platform_interface:
     dependency: transitive
@@ -469,6 +505,7 @@ packages:
     source: hosted
     version: "2.1.3"
 <<<<<<< HEAD
+<<<<<<< HEAD
   process:
     dependency: transitive
     description:
@@ -477,6 +514,8 @@ packages:
     source: hosted
     version: "4.2.4"
 =======
+=======
+>>>>>>> 84a7e32bd974a696bd1b25b59e9b4dc0a1c2e76c
   quiver:
     dependency: transitive
     description:
@@ -484,6 +523,9 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "3.2.1"
+<<<<<<< HEAD
+>>>>>>> 84a7e32bd974a696bd1b25b59e9b4dc0a1c2e76c
+=======
 >>>>>>> 84a7e32bd974a696bd1b25b59e9b4dc0a1c2e76c
   sky_engine:
     dependency: transitive
@@ -547,6 +589,7 @@ packages:
     source: hosted
     version: "2.1.2"
 <<<<<<< HEAD
+<<<<<<< HEAD
   win32:
     dependency: transitive
     description:
@@ -562,6 +605,8 @@ packages:
     source: hosted
     version: "0.2.0+3"
 =======
+=======
+>>>>>>> 84a7e32bd974a696bd1b25b59e9b4dc0a1c2e76c
   video_player:
     dependency: "direct dev"
     description:
@@ -604,6 +649,9 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "6.1.0"
+<<<<<<< HEAD
+>>>>>>> 84a7e32bd974a696bd1b25b59e9b4dc0a1c2e76c
+=======
 >>>>>>> 84a7e32bd974a696bd1b25b59e9b4dc0a1c2e76c
 sdks:
   dart: ">=2.18.6 <3.0.0"
