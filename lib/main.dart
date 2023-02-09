@@ -1,6 +1,10 @@
+import 'package:fitness_app/screens/deit_screen.dart';
+import 'package:fitness_app/screens/exercise_screen.dart';
+import 'package:fitness_app/screens/signup_screen.dart';
 import 'package:fitness_app/screens/splash_screen.dart';
 import 'package:fitness_app/screens/login_screen.dart';
 import 'package:flutter/material.dart';
+// ignore: depend_on_referenced_packages
 
 void main() {
   runApp(const MyApp());
@@ -17,10 +21,9 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.red,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      initialRoute: '/',
+      initialRoute: '/ExerciseScreen',
       routes: {
-        "/": (context) => SplashScreen(),
-        '/LoginScreen': (context) => LoginScreen(),
+        '/ExerciseScreen': (context) => ExerciseScreen(),
       },
     );
   }
